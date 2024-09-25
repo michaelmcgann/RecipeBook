@@ -1,0 +1,14 @@
+C:\Users\micha\C#UdemyCourse\4-OOP-Poly-Inher-Inter\4-OOP\RecipeApp\bin\Debug\net8.0\RecipeApp.exe
+C:\Users\micha\C#UdemyCourse\4-OOP-Poly-Inher-Inter\4-OOP\RecipeApp\bin\Debug\net8.0\RecipeApp.deps.json
+C:\Users\micha\C#UdemyCourse\4-OOP-Poly-Inher-Inter\4-OOP\RecipeApp\bin\Debug\net8.0\RecipeApp.runtimeconfig.json
+C:\Users\micha\C#UdemyCourse\4-OOP-Poly-Inher-Inter\4-OOP\RecipeApp\bin\Debug\net8.0\RecipeApp.dll
+C:\Users\micha\C#UdemyCourse\4-OOP-Poly-Inher-Inter\4-OOP\RecipeApp\bin\Debug\net8.0\RecipeApp.pdb
+C:\Users\micha\C#UdemyCourse\4-OOP-Poly-Inher-Inter\4-OOP\RecipeApp\obj\Debug\net8.0\RecipeApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\micha\C#UdemyCourse\4-OOP-Poly-Inher-Inter\4-OOP\RecipeApp\obj\Debug\net8.0\RecipeApp.AssemblyInfoInputs.cache
+C:\Users\micha\C#UdemyCourse\4-OOP-Poly-Inher-Inter\4-OOP\RecipeApp\obj\Debug\net8.0\RecipeApp.AssemblyInfo.cs
+C:\Users\micha\C#UdemyCourse\4-OOP-Poly-Inher-Inter\4-OOP\RecipeApp\obj\Debug\net8.0\RecipeApp.csproj.CoreCompileInputs.cache
+C:\Users\micha\C#UdemyCourse\4-OOP-Poly-Inher-Inter\4-OOP\RecipeApp\obj\Debug\net8.0\RecipeApp.dll
+C:\Users\micha\C#UdemyCourse\4-OOP-Poly-Inher-Inter\4-OOP\RecipeApp\obj\Debug\net8.0\refint\RecipeApp.dll
+C:\Users\micha\C#UdemyCourse\4-OOP-Poly-Inher-Inter\4-OOP\RecipeApp\obj\Debug\net8.0\RecipeApp.pdb
+C:\Users\micha\C#UdemyCourse\4-OOP-Poly-Inher-Inter\4-OOP\RecipeApp\obj\Debug\net8.0\RecipeApp.genruntimeconfig.cache
+C:\Users\micha\C#UdemyCourse\4-OOP-Poly-Inher-Inter\4-OOP\RecipeApp\obj\Debug\net8.0\ref\RecipeApp.dll
