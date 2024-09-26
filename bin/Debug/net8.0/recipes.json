@@ -1,0 +1,24 @@
+{
+  "RecipesList": [
+    {
+      "Name": "cat sue curry",
+      "Ingredients": [
+        {
+          "Name": "Flour",
+          "Id": 1,
+          "Instructions": "Add 100g to the mix."
+        },
+        {
+          "Name": "Butter",
+          "Id": 5,
+          "Instructions": "Add 1 tablespoon to the mix"
+        },
+        {
+          "Name": "Sugar",
+          "Id": 3,
+          "Instructions": "Add 1 teaspoon to the mix."
+        }
+      ]
+    }
+  ]
+}
