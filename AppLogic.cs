@@ -3,12 +3,16 @@ namespace RecipeApp;
 public class AppLogic {
 
     public Recipes RecipesList { get; set; }
-    public string FilePath { get; set; }
     public bool IsAppRunning { get; private set; } = true;
+    private readonly IInputVerifier _inputVerifier;
+    private const int MainMenuSize = 3;
+    private const int IngredientListSize = 5;
+    private const string BackButton = "b";
+    private const string QuitButton = "q";
 
-    public AppLogic(string filePath) {
-        RecipesList = Recipes.LoadRecipes(filePath);
-        FilePath = filePath;
+    public AppLogic(Recipes recipes, IInputVerifier inputVerifier) {
+        _inputVerifier = inputVerifier;
+        RecipesList = recipes;
     }
 
     public void StartApp() {
@@ -24,13 +28,13 @@ public class AppLogic {
             DisplayMainMenu();
             string? mainMenuChoiceString = Console.ReadLine();
             isValidMainMenuChoice =
-                InputVerifier.MainMenuChoiceVerifier(mainMenuChoiceString, out mainMenuChoice);
+                _inputVerifier.MainMenuChoiceVerifier(mainMenuChoiceString, out mainMenuChoice, MainMenuSize);
         } while (!isValidMainMenuChoice);
 
         return mainMenuChoice;
     }
 
-    public void DisplayMainMenu() {
+    private void DisplayMainMenu() {
         Console.WriteLine("********MAIN MENU********");
         Console.WriteLine();
         Console.WriteLine("Select from an option below.");
@@ -64,7 +68,7 @@ public class AppLogic {
             Console.WriteLine("--------------------------");
             Console.WriteLine($"Recipe added: {recipe.Name}");
             Console.WriteLine("--------------------------");
-            RecipesList.AddRecipe(recipe, FilePath);
+            RecipesList.AddRecipe(recipe);
         }
         else {
             Console.WriteLine($"Recipe is empty. {recipe.Name} has not been added.");
@@ -83,7 +87,7 @@ public class AppLogic {
             if (choiceString != null && choiceString.ToLower().Equals("q")) {
                 break;
             }
-            bool isValidChoice = InputVerifier.IngredientChoiceVerifier(choiceString, out int choiceInt);
+            bool isValidChoice = _inputVerifier.IngredientChoiceVerifier(choiceString, out int choiceInt, IngredientListSize);
             if (isValidChoice) {
                 recipe.AddIngredient(choiceInt);
                 Console.WriteLine("--------------------------");
@@ -131,10 +135,10 @@ public class AppLogic {
                               "[Q]uit app.");
             Console.WriteLine("--------------------------");
             choiceString = Console.ReadLine();
-            isValidChoice = InputVerifier.BackToMainOrQuitVerifier(choiceString);
+            isValidChoice = _inputVerifier.BackToMainOrQuitVerifier(choiceString, BackButton, QuitButton);
         } while (!isValidChoice);
 
-        if (choiceString!.ToLower().Equals("q")) {
+        if (choiceString!.ToLower().Equals(QuitButton)) {
             IsAppRunning = false;
         }
     }

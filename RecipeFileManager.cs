@@ -2,14 +2,14 @@ using System.Text.Json;
 
 namespace RecipeApp;
 
-public class FileManager {
-    private static readonly JsonSerializerOptions JsonSerializerOptions = new JsonSerializerOptions { WriteIndented = true };
+public class RecipeFileManager {
+    private static readonly JsonSerializerOptions JsonSerializerOptions = new() { WriteIndented = true };
 
     public static Recipes LoadFromFile(string filePath) {
-        Recipes recipes = new Recipes();
+        Recipes recipes = new Recipes(filePath);
         if (File.Exists(filePath)) {
             string json = File.ReadAllText(filePath);
-            recipes = JsonSerializer.Deserialize<Recipes>(json) ?? new Recipes();
+            recipes = JsonSerializer.Deserialize<Recipes>(json) ?? new Recipes(filePath);
         }
 
         return recipes;

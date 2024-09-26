@@ -12,3 +12,4 @@ C:\Users\micha\C#UdemyCourse\4-OOP-Poly-Inher-Inter\4-OOP\RecipeApp\obj\Debug\ne
 C:\Users\micha\C#UdemyCourse\4-OOP-Poly-Inher-Inter\4-OOP\RecipeApp\obj\Debug\net8.0\RecipeApp.pdb
 C:\Users\micha\C#UdemyCourse\4-OOP-Poly-Inher-Inter\4-OOP\RecipeApp\obj\Debug\net8.0\RecipeApp.genruntimeconfig.cache
 C:\Users\micha\C#UdemyCourse\4-OOP-Poly-Inher-Inter\4-OOP\RecipeApp\obj\Debug\net8.0\ref\RecipeApp.dll
+C:\Users\micha\C#UdemyCourse\4-OOP-Poly-Inher-Inter\4-OOP\RecipeApp\obj\Debug\net8.0\RecipeApp.sourcelink.json

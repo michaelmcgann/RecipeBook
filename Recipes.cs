@@ -3,18 +3,16 @@ namespace RecipeApp;
 public class Recipes {
 
     public List<Recipe> RecipesList { get; set; }
+    private readonly string _filePath;
 
-    public Recipes() {
+    public Recipes(string filePath) {
+        _filePath = filePath;
         RecipesList = new List<Recipe>();
     }
 
-    public Recipes(List<Recipe> recipes) {
-        RecipesList = recipes;
-    }
-
-    public void AddRecipe(Recipe recipe, string filePath) {
+    public void AddRecipe(Recipe recipe) {
         RecipesList.Add(recipe);
-        SaveRecipes(filePath);
+        SaveRecipes(_filePath);
         
     }
 
@@ -29,10 +27,10 @@ public class Recipes {
     }
 
     public void SaveRecipes(string filePath) {
-        FileManager.SaveToFile(filePath, this);
+        RecipeFileManager.SaveToFile(_filePath, this);
     }
 
-    public static Recipes LoadRecipes(string filePath) {
-        return FileManager.LoadFromFile(filePath);
+    public Recipes LoadRecipes() {
+        return RecipeFileManager.LoadFromFile(_filePath);
     }
 }

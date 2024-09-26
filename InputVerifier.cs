@@ -1,16 +1,14 @@
 namespace RecipeApp;
 
-public static class InputVerifier {
-    private const int MainMenuSize = 3;
-    private const int IngredientListSize = 5;
+public class InputVerifier : IInputVerifier {
 
-    public static bool MainMenuChoiceVerifier(string? inputString, out int inputInt) =>
-        int.TryParse(inputString, out inputInt) && inputInt is > 0 and <= MainMenuSize;
+    public bool MainMenuChoiceVerifier(string? inputString, out int inputInt, int mainMenuSize) =>
+        int.TryParse(inputString, out inputInt) && inputInt > 0 && inputInt <= mainMenuSize;
 
-    public static bool BackToMainOrQuitVerifier(string? input) =>
-        input != null && (input.ToLower().Equals("b") || input.ToLower().Equals("q"));
+    public bool BackToMainOrQuitVerifier(string? input, string backButton, string quitButton) =>
+        input != null && (input.ToLower().Equals(backButton) || input.ToLower().Equals(quitButton));
 
-    public static bool IngredientChoiceVerifier(string? inputString, out int inputInt) =>
-        int.TryParse(inputString, out inputInt) && inputInt is > 0 and <= IngredientListSize;
+    public bool IngredientChoiceVerifier(string? inputString, out int inputInt, int ingredientListSize) =>
+        int.TryParse(inputString, out inputInt) && inputInt > 0 && inputInt <= ingredientListSize;
 
 }

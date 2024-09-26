@@ -4,7 +4,9 @@ class Program {
     static void Main(string[] args) {
 
         const string filePath = "recipes.json";
-        AppLogic app = new AppLogic(filePath);
+        Recipes recipes = new Recipes(filePath);
+        IInputVerifier inputVerifier = new InputVerifier();
+        AppLogic app = new AppLogic(recipes, inputVerifier);
 
         do {
 
